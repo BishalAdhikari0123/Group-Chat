@@ -5,7 +5,7 @@ import mongoose from 'mongoose'
 
 config();
 
-const connectToDB = () => mongoose.connect(process.env.MONGODB_URL).then(async () => {
+const connectToDB = () => mongoose.connect("mongodb+srv://<bsaladkari>:<9KaER24DKqHQVKv0>@cluster0.mongodb.net/<groupChat>?retryWrites=true&w=majority").then(async () => {
     return Promise.resolve("Connected to MongoDB.")
 })
     .catch(function (err) {
