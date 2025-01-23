@@ -12,10 +12,12 @@ connectToDB().then(function (connectMessage) {
     app.use(express.json())
     app.use(getUserFromAuthToken)
     app.use(routes);
-    const port = process.env.PORT || 4000;
+    const port = process.env.PORT || 3000||3002;
     app.listen(port, function () {
         console.log("Server running on PORT", port)
     })
+
+    app.use( "/images/messages", express.static("/images/messages", ))
 }).catch(function (err) {
     console.error(err)
 })
