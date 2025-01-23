@@ -12,7 +12,7 @@ connectToDB().then(function (connectMessage) {
     app.use(express.json())
     app.use(getUserFromAuthToken)
     app.use(routes);
-    const port = process.env.PORT || 3000||3002;
+    const port = process.env.PORT || 3000||3002||4000;
     app.listen(port, function () {
         console.log("Server running on PORT", port)
     })
